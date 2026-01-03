@@ -1,0 +1,88 @@
+.navbar-custom {
+  width: 100vw; 
+  background: rgba(255, 240, 245, 0.9); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: var(--color-dark) !important; 
+  transition: transform 0.3s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.nav-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; 
+  object-fit: cover;  
+  border: 2px solid var(--color-medium); 
+  padding: 2px; 
+  background-color: white;
+}
+
+.nav-link {
+  color: var(--color-dark) !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0 15px; 
+  padding: 5px 0 !important; 
+  position: relative; 
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-medium); 
+  transition: width 0.3s ease-in-out; 
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: var(--color-dark) !important;
+  text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor; 
+  transform: translate(3px, -3px); 
+}
+
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-contact {
+  padding: 10px 25px !important; 
+  border: 2px solid var(--color-dark);
+  border-radius: 50px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.btn-contact::after {
+  display: none !important; 
+}
+
+.btn-contact:hover {
+  background-color: var(--color-dark) !important;
+  color: white !important;
+  transform: translateY(-3px); 
+  box-shadow: 0 5px 15px rgba(183, 92, 130, 0.3);
+  text-shadow: none; 
+}
+
+.navbar-toggler {
+  border-color: var(--color-dark);
+}

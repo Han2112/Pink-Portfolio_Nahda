@@ -1,0 +1,81 @@
+.contact-section {
+  padding-top: 8rem;
+  padding-bottom: 15rem; 
+  width: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 193, 227, 0.2) 100%);
+  position: relative;
+}
+
+.floating-group {
+  position: relative; 
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px 20px; 
+  font-size: 1.1rem;
+  border-radius: 12px;
+  background-color: var(--color-bg); 
+  border: 3px solid var(--color-medium) !important; 
+  box-shadow: 0 5px 15px rgba(183, 92, 130, 0.05);
+  color: var(--color-dark);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  outline: none;
+  height: 60px; 
+}
+
+textarea.form-control {
+  height: 150px;
+  padding-top: 20px;
+}
+
+.floating-label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  font-weight: 600;
+  pointer-events: none; 
+  transition: all 0.2s ease-in-out;
+  background-color: transparent; 
+  padding: 0 5px; 
+  border-radius: 5px;
+}
+
+textarea.form-control ~ .floating-label {
+  top: 25px; 
+}
+.form-control:focus ~ .floating-label,
+.form-control:not(:placeholder-shown) ~ .floating-label,
+.form-control:hover ~ .floating-label {
+  top: 0; 
+  transform: translateY(-50%); 
+  left: 15px;
+  font-size: 0.9rem; 
+  color: var(--color-dark);
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.form-control:hover,
+.form-control:focus,
+.form-control:not(:placeholder-shown) {
+  background-color: #ffffff;
+  border-color: var(--color-dark) !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 10px 25px rgba(183, 92, 130, 0.2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: var(--color-dark) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}

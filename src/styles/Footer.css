@@ -1,0 +1,12 @@
+.footer-section {
+  background-color: var(--color-dark); 
+  color: white;
+
+  padding: 40px 0; 
+
+  width: 100%;
+  position: relative;
+  z-index: 10; 
+
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
